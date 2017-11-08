@@ -25,3 +25,14 @@ Capybara.app = Battle
       expect(page).to have_content 'Dave vs. Mittens'
     end
   end
+
+    feature 'displaying hit points' do
+      scenario "Opponent hit point" do
+        visit('/')
+        fill_in :player1, with: 'Dave'
+        fill_in :player2, with: 'Mittens'
+        click_button 'Submit'
+        visit('/play')
+        expect(page).to have_content "Opponent Monster Your Monster"
+      end
+  end
