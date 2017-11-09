@@ -3,7 +3,7 @@ class Player
 
   DEFAULT_HP = 100
 
-  def initialize(name,hp = DEFAULT_HP)
+  def initialize(name = nil,hp = DEFAULT_HP)
     @name = name
     @hp = hp
   end
