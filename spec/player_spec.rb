@@ -13,7 +13,7 @@ describe Player do
     expect(player1.hp).to eq described_class::DEFAULT_HP
   end
 
-  it "reduces player2 hit points" do
-    expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
-  end
+  # it "reduces player2 hit points" do
+  #   expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
+  # end
 end
