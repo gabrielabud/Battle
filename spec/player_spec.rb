@@ -5,15 +5,17 @@ describe Player do
   let(:player1) { described_class.new("Gabriela") }
   let(:player2) { described_class.new("Lewis") }
 
-  it "returns a name" do
-    expect(player1.name).to eq("Gabriela")
+  describe "Attributes" do
+    it "returns a name" do
+      expect(player1.name).to eq("Gabriela")
+    end
   end
 
   it "returns the hit points" do
     expect(player1.hp).to eq described_class::DEFAULT_HP
   end
 
-  # it "reduces player2 hit points" do
-  #   expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
-  # end
+  it "reduces player2 hit points" do
+    expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
+  end
 end
