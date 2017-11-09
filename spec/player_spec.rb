@@ -1,8 +1,9 @@
 require 'player'
 
 describe Player do
-  player1 = Player.new("Gabriela",100)
-  player2 = Player.new("Lewis",100)
+
+  let(:player1) { described_class.new("Gabriela") }
+  let(:player2) { described_class.new("Lewis") }
 
   it "returns a name" do
     expect(player1.name).to eq("Gabriela")
@@ -13,7 +14,6 @@ describe Player do
   end
 
   it "reduces player2 hit points" do
-    player1.attack(player2)
-    expect(player2.reduce_hp).to change { player2.hp }.by{-10}
+    expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
   end
 end
