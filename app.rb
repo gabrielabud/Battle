@@ -3,12 +3,6 @@ require './lib/player'
 
 class Battle < Sinatra::Base
 
-  attr_reader :hp
-  def initialize
-    super()
-    @hp = 75
-  end
-
   enable :sessions
   get '/' do
     erb(:index)
@@ -23,13 +17,17 @@ class Battle < Sinatra::Base
   get "/play" do
     @pl1 = $pl1.name
     @pl2 = $pl2.name
+    @hp1 = $pl1.hp
+    @hp2 = $pl2.hp
     erb(:play)
   end
 
   get '/attack' do
     @pl1 = $pl1.name
     @pl2 = $pl2.name
+    $pl1.attack($pl1)
     erb(:attack)
+
   end
   # start the server if ruby file executed directly
   run! if app_file == $0
