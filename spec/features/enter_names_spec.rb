@@ -33,6 +33,6 @@ Capybara.app = Battle
         fill_in :player2, with: 'Mittens'
         click_button 'Submit'
         visit('/play')
-        expect(page).to have_content "Opponent Monster Your Monster"
+        expect(page).to have_content "Dave vs. Mittens 60HP"
       end
   end
