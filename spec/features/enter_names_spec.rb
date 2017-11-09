@@ -6,13 +6,6 @@ Capybara.app = Battle
 
     scenario "submitting names" do
       sign_in_and_play
-        expect(page).to have_content 'Dave vs. Mittens'
-    end
-  end
-
-  feature 'displaying hit points' do
-    scenario "Opponent hit point" do
-      sign_in_and_play
-        expect(page).to have_content "60HP"
+        expect(page).to have_content 'Gabriela vs. Lewis'
     end
   end
