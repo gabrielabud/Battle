@@ -1,4 +1,13 @@
+<% if @game.player_1.hp > 0 && @game.player_2.hp > 0 %>
 <%= @game.player_2.name %> attacked <%= @game.player_1.name %>
+<% elsif @game.player_1.hp < 0 %>
+  <%= @game.player_2.name %> you lost
+<% else @game.player_2.hp < 0 %>
+  <%= @game.player_1.name %> you lost
+<% end %>
+<br/>
+
 <form action="/play">
   <input type="submit" value="Back">
 </form>
+<br/>
