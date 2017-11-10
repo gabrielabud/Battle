@@ -2,33 +2,26 @@ require 'game'
 
 describe Game do
 
-  let(:player1) { double(:player) }
-  let(:player2) { double(:player, reduce_hp: true) }
-  let(:game1) { described_class.new("Lewis","Gabriela") }
+  subject(:game) { described_class.new(player_1, player_2) }
+  let(:player_1) { double :player_1 }
+  let(:player_2) { double :player_2 }
 
-  describe "Attributes" do
-    it "creates a new instance of game" do
+  describe 'Attributes' do
+    it 'creates a new instance of game' do
       expect(game1).to be_an_instance_of(Game)
     end
 
-    it "takes two arguments upon instantiation" do
-      allow(game1).to receive(:player1).and_return("Lewis")
-      expect(game1.player1).to eq("Lewis")
+    it 'retrieves the first player' do
+      expect(game.player_1).to eq player_1
     end
 
-    it "takes two arguments upon instantiation" do
-      allow(game1).to receive(:player2).and_return("Gabriela")
-      expect(game1.player2).to eq("Gabriela")
+    it 'retrieves the second player' do
+      expect(game.player_2).to eq player_2
     end
   end
-
-  describe "#attack" do
-    context "when attacking" do
-      it "calls player.reduce_hp" do
-        game1.attack(player2)
-      end
-    end
-
-  end
-
+  # describe "#attack" do
+  #     it "calls player.reduce_hp" do
+  #       game.attack(player_2)
+  #     end
+  # end
 end

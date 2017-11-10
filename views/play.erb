@@ -1,4 +1,4 @@
- <%= "#{@pl1} vs. #{@pl2} #{@hp2} HP"%><br />
+<%= @game.player_1.name %> vs. <%= @game.player_2.name %> <%= @game.player_2.hp %> HP
  <br />
  <br />
  <form action="/attack">

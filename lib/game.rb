@@ -1,13 +1,18 @@
+# game of class of battle
 class Game
-  attr_reader :player1, :player2
+  def initialize(player_1, player_2)
+    @players = [player_1, player_2]
+  end
 
-  def initialize (player1, player2)
-    @player1 = Player.new(player1)
-    @player2 = Player.new(player2)
+  def player_1
+    @players.first
+  end
+
+  def player_2
+    @players.last
   end
 
   def attack(player)
     player.reduce_hp
   end
-
 end
