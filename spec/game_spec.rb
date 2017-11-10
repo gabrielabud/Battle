@@ -8,7 +8,7 @@ describe Game do
 
   describe 'Attributes' do
     it 'creates a new instance of game' do
-      expect(game1).to be_an_instance_of(Game)
+      expect(game).to be_an_instance_of(Game)
     end
 
     it 'retrieves the first player' do
