@@ -1,9 +1,17 @@
 # game of class of battle
 class Game
 
+
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @turn = 1
+  end
+
+  def self.game
+    @@game
+  end
+  def self.game=(value)
+    @@game = value
   end
 
   def player_1
