@@ -1,17 +1,17 @@
 # game of class of battle
 class Game
 
-
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @turn = 1
   end
-
-  def self.game
-    @@game
+  # It's only accessible to other class methods
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
   end
-  def self.game=(value)
-    @@game = value
+
+  def self.instance
+    @game
   end
 
   def player_1
