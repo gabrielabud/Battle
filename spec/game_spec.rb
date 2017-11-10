@@ -19,6 +19,15 @@ describe Game do
       expect(game.player_2).to eq player_2
     end
   end
+
+  describe '#switch players turn' do
+    it 'should switch player 1 to player 2' do
+      game.switch
+      expect(game.player_1).to eq player_2
+    end
+  end
+
+
   # describe "#attack" do
   #     it "calls player.reduce_hp" do
   #       game.attack(player_2)

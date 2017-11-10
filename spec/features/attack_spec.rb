@@ -6,4 +6,5 @@ feature 'attacking oppents' do
     click_button 'Attack'
     expect(page).to have_content 'Gabriela attacked Lewis'
   end
+  
 end

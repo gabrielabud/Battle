@@ -12,6 +12,13 @@ feature 'attack reduces hit points' do
     sign_in_and_play
     click_button 'Attack'
     click_button 'Back'
-    expect(page).to have_content 'Gabriela vs. Lewis 90 HP'
+    expect(page).to have_content 'Lewis 90 HP vs. Gabriela 100 HP Lewis is attacking now!'
   end
+  # feature 'switching button' do
+  #   it 'should have the option to switch players ' do
+  #     sign_in_and_play
+  #     click_button 'Switch'
+  #     expect(page).to have_content 'Lewis vs. Gabriela 100 HP'
+  #   end
+  # end
 end

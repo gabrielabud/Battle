@@ -17,4 +17,6 @@ describe Player do
   it 'reduces player2 hit points' do
     expect { player2.reduce_hp }.to change { player2.hp }.by(-10)
   end
+
+
 end
